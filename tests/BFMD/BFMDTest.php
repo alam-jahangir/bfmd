@@ -1,19 +1,21 @@
 <?php
+
 namespace BFMD;
 
 use PHPUnit\Framework\TestCase;
-class ParserTest extends TestCase
+
+class BFMDTest extends TestCase
 {
-    private $parser;
+    private $broccoliMarkDown;
 
     protected function setUp(): void
     {
-        $this->parser = new Parser();
+        $this->broccoliMarkDown = new BroccoliMarkDown();
     }
 
     protected function tearDown(): void
     {
-        $this->parser = NULL;
+        $this->broccoliMarkDown = NULL;
     }
 
     public function addDataProvider()
@@ -40,10 +42,10 @@ class ParserTest extends TestCase
     /**
      * @dataProvider addDataProvider
      */
-    public function testBFMDProces($input, $expected): void
+    public function testParse($input, $expected): void
     {
 
-        $result = $this->parser->process($input);
+        $result = $this->broccoliMarkDown->parse($input);
         $this->assertEquals($expected, $result);
 
     }
