@@ -1,4 +1,4 @@
-##Parser for BFMD (Broccoli flavored MarkDown
+## Parser for BFMD (Broccoli flavored MarkDown
 Create a parser that takes a given input and converts it to some output using some of the standard MarkDown components and some special flavor.
  ```php
  BFMD has the following components: 
